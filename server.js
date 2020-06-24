@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
 });
 // when connected to the database console.log(established).
 mongoose.connection.once("open", () => {
-  console.log("Database connection established");
+  console.log("Your database is connected");
 });
 
 // gets html routes 
