@@ -25,6 +25,10 @@ mongoose.connection.once("open", () => {
 });
 
 // gets html routes 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
+
 app.get("/exercise", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/exercise.html"));
 });
@@ -33,7 +37,7 @@ app.get("/stats", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/stats.html"));
 });
 
-app.get("/workouts", (req, res) => {
+app.get("/workout", (req, res) => {
     res.send(200);
 });
 
